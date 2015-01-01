@@ -22,11 +22,13 @@ function randomStyle() {
 
 /**
  * Helper function to return a random number; helps make the code a little cleaner
- * @param (integer) min - the smallest number you wish the function to return
- * @param (integer) max - the largest number you wish the function to return
+ * Logic help came from: http://stackoverflow.com/questions/1527803/generating-random-numbers-in-javascript-in-a-specific-range
+ *
+ * @param (integer) min - the smallest number you wish the function to return (so this is inclusive)
+ * @param (integer) max - the largest number you wish the function to return (so this is inclusive)
  */
 function randomNumber(min, max) {
-    return Math.floor(Math.random() * max) + min;
+    return Math.floor(Math.random() * (max - min +1)) + min;
 }
 
 /** SCRIPTS **/
