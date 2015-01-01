@@ -5,14 +5,19 @@
  */
 function randomStyle() {
     
-    // the basis for deciding on an outfit, which is based on me originally rolling a d20
-    var choice = Math.floor(Math.random() * 20) + 1;
+    // this will return the randomly created choice; eventually will be a JSON object
+    // but for now is just a string variable
+    var choice = "";
     
-    if (choice < 9) {
-        return "Casual";
+    // the basis for deciding on an outfit, which is based on me originally rolling a d20
+    if ((Math.floor(Math.random() * 20) + 1) < 9) {
+        // if it's less than 9, it's a casual day, dressy otherwise
+        choice = "Casual";
     } else {
-        return "Dressy";
+        choice = "Dressy";
     }
+    
+    return choice;
 }
 
 /** SCRIPTS **/
