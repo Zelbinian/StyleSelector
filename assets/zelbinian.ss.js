@@ -20,6 +20,15 @@ function randomStyle() {
     return choice;
 }
 
+/**
+ * Helper function to return a random number; helps make the code a little cleaner
+ * @param (integer) min - the smallest number you wish the function to return
+ * @param (integer) max - the largest number you wish the function to return
+ */
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * max) + min;
+}
+
 /** SCRIPTS **/
 
 /**
