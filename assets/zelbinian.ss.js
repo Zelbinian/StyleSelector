@@ -10,7 +10,7 @@ function randomStyle() {
     var choice = "";
     
     // the basis for deciding on an outfit, which is based on me originally rolling a d20
-    if ((Math.floor(Math.random() * 20) + 1) < 9) {
+    if (randomNumber(1, 20) < 9) {
         // if it's less than 9, it's a casual day, dressy otherwise
         choice = "Casual";
     } else {
