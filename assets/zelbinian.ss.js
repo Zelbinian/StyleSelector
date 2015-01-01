@@ -8,8 +8,11 @@ function randomStyle() {
     // the basis for deciding on an outfit, which is based on me originally rolling a d20
     var choice = Math.floor(Math.random() * 20) + 1;
     
-    return (choice);
-
+    if (choice < 9) {
+        return "Casual";
+    } else {
+        return "Dressy";
+    }
 }
 
 /** SCRIPTS **/
