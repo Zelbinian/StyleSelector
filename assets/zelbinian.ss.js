@@ -8,7 +8,7 @@
  * @param (integer) max - the largest number you wish the function to return (so this is inclusive)
  */
 function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min +1)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 /**
@@ -18,10 +18,11 @@ function randomStyle() {
     
     // this will return the randomly created choice; eventually will be a JSON object
     // but for now is just a string variable
-    var choice = "";
+    // also assigning the result of the random roll to a variable
+    var choice = "", randomRoll = randomNumber(1, 20);
     
     // the basis for deciding on an outfit, which is based on me originally rolling a d20
-    if (randomNumber(1, 20) < 9) {
+    if (randomRoll < 9) {
         // if it's less than 9, it's a casual day, dressy otherwise
         choice = "Casual";
     } else {
