@@ -1,6 +1,17 @@
 /** FUNCTIONS **/
 
 /**
+ * Helper function to return a random number; helps make the code a little cleaner
+ * Logic help came from: http://stackoverflow.com/questions/1527803/generating-random-numbers-in-javascript-in-a-specific-range
+ *
+ * @param (integer) min - the smallest number you wish the function to return (so this is inclusive)
+ * @param (integer) max - the largest number you wish the function to return (so this is inclusive)
+ */
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min +1)) + min;
+}
+
+/**
  * Generates the information necessary for the website to decide what outfit to suggest
  */
 function randomStyle() {
@@ -18,17 +29,6 @@ function randomStyle() {
     }
     
     return choice;
-}
-
-/**
- * Helper function to return a random number; helps make the code a little cleaner
- * Logic help came from: http://stackoverflow.com/questions/1527803/generating-random-numbers-in-javascript-in-a-specific-range
- *
- * @param (integer) min - the smallest number you wish the function to return (so this is inclusive)
- * @param (integer) max - the largest number you wish the function to return (so this is inclusive)
- */
-function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min +1)) + min;
 }
 
 /** SCRIPTS **/
