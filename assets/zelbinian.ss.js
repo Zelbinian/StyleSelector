@@ -28,7 +28,8 @@ function randomStyle() {
         choice += "Dress shirt";
         
         // now we see about other acoutrements 
-        if (randomNumber(1,10) > 3) choice += ", tie";
+        if (randomNumber(1,10) > 4) choice += ", tie";
+        if (randomNumber(1,10) > 4) choice += ", vest";
     }
     
     return choice;
