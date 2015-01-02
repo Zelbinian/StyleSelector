@@ -29,9 +29,9 @@ function randomStyle() {
         
         // now we see about other acoutrements
         if (randomNumber(1, 10) > 8) {
-            choice += ", sloppy collars";
-        } else {
             choice += ", neat collars";
+        } else {
+            choice += ", sloppy collars";
         }
         if (randomNumber(1, 10) > 3) {
             choice += ", tie";
