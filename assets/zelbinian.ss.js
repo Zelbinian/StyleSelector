@@ -27,8 +27,9 @@ function randomStyle() {
     } else {
         choice += "Dress shirt";
         
-        // now we see about other acoutrements 
-        if (randomNumber(1,10) > 4) choice += ", tie";
+        // now we see about other acoutrements
+        if (randomNumber(1,10) > 8) choice += ", sloppy collars" else choice += ", neat collars";
+        if (randomNumber(1,10) > 3) choice += ", tie";
         if (randomNumber(1,10) > 4) choice += ", vest";
     }
     
