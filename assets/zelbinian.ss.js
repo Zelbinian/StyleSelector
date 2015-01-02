@@ -25,7 +25,10 @@ function randomStyle() {
         // if it's less than 9, it's a casual day, dressy otherwise
         choice = "Casual";
     } else {
-        choice = "Dressy";
+        choice += "Dress shirt";
+        
+        // now we see about other acoutrements 
+        if (randomNumber(1,10) > 3) choice += ", tie";
     }
     
     return choice;
