@@ -8,7 +8,7 @@
  * @param (integer) max - the largest number you wish the function to return (so this is inclusive)
  */
 function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min +1)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 /**
@@ -28,9 +28,17 @@ function randomStyle() {
         choice += "Dress shirt";
         
         // now we see about other acoutrements
-        if (randomNumber(1,10) > 8) choice += ", sloppy collars" else choice += ", neat collars";
-        if (randomNumber(1,10) > 3) choice += ", tie";
-        if (randomNumber(1,10) > 4) choice += ", vest";
+        if (randomNumber(1, 10) > 8) {
+            choice += ", sloppy collars";
+        } else {
+            choice += ", neat collars";
+        }
+        if (randomNumber(1, 10) > 3) {
+            choice += ", tie";
+        }
+        if (randomNumber(1, 10) > 4) {
+            choice += ", vest";
+        }
     }
     
     return choice;
