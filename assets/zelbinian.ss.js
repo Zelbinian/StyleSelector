@@ -1,3 +1,8 @@
+/** DATA OBJECTS **/
+var everydayKnots = [];
+var fancyKnots = [];
+var extraFancyKnots = [];
+
 /** FUNCTIONS **/
 
 /**
