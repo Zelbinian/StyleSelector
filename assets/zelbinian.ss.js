@@ -1,6 +1,6 @@
 /** DATA OBJECTS **/
 var everydayKnots = ["Four-in-Hand", "Half Windsor"];
-var fancyKnots = ["Onassis", "Eldredge", "Trinity", "Novotny", "Caldwell Swag", "Viper", "Deivao Twist", "Arrow"];
+var fancyKnots = ["Onassis", "Eldredge", "Trinity", "Novotny", "Caldwell Swag", "Viper", "Deivao Twist", "Arrow", "Cape"];
 var extraFancyKnots = ["Double Eldredge", "Harlequin", "FinFrock", "Pekada", "Tulip"];
 
 /** FUNCTIONS **/
@@ -40,6 +40,10 @@ function randomStyle() {
         }
         if (randomNumber(1, 10) > 3) {
             choice += ", tie";
+            
+            if (randomNumber(1, 10) <= 8) {
+
+            }
         }
         if (randomNumber(1, 10) > 4) {
             choice += ", vest";
