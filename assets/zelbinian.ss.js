@@ -7,6 +7,7 @@ var extraFancyKnots = ["Double Eldredge", "Harlequin", "FinFrock", "Pekada", "Tu
 
 /**
  * Helper function to return a random number; helps make the code a little cleaner
+ * Somehow works even if max and min are reversed
  * Logic help came from: http://stackoverflow.com/questions/1527803/generating-random-numbers-in-javascript-in-a-specific-range
  *
  * @param (integer) min - the smallest number you wish the function to return (so this is inclusive)
@@ -14,6 +15,24 @@ var extraFancyKnots = ["Double Eldredge", "Harlequin", "FinFrock", "Pekada", "Tu
  */
 function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+/**
+ * Helper function that takes a list of knots (or anything really) and returns a randomly
+ * chosen element of the list
+ *
+ * @param (array) list - list from which an element should be chosen
+ */
+function chooseKnot(list) {
+    
+    // protecting against a null or empty list being tossed in
+    if (list === null || list.length === 0) {
+        throw new Error("The list cannot be empty");
+    }
+    
+    var randomIndex = randomNumber(0, list.length - 1);
+    
+    return list[randomIndex];
 }
 
 /**
@@ -85,7 +104,7 @@ function randomStyle() {
             // k, handsome, but what kind of knot? how baller we gonna be?
             if (cleanCollars) {} else {
 
-                // if we're doin' sloppy collars, don't get to crazy with it
+                // if we're doin' sloppy collars, don't get too crazy with it
                 choice += " (" + everydayKnots[(randomNumber(0, (everydayKnots.length)))] + " knot)";
             }
         }
