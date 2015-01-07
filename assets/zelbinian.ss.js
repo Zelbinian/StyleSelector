@@ -64,10 +64,12 @@ function randomStyle() {
 
         // now we see about other acoutrements
         
-        // wearing a tie today?
-        if (randomNumber(1, 10) > 3) {
-            choice += ", tie";
-            tie = true;
+        // crisp and traditional, or sloppy and fashion forward?
+        if (randomNumber(1, 10) > 8) {
+            choice += ", neat collars";
+            cleanCollars = true;
+        } else {
+            choice += ", sloppy collars";
         }
         
         // how about a vest?
@@ -76,12 +78,9 @@ function randomStyle() {
             vest = true;
         }
         
-        // crisp and traditional, or sloppy and fashion forward?
-        if (randomNumber(1, 10) > 8) {
-            choice += ", neat collars";
-            cleanCollars = true;
-        } else {
-            choice += ", sloppy collars";
+        // wearing a tie today?
+        if (randomNumber(1, 10) > 3) {
+            choice += ", tie";
         }
     }
 
