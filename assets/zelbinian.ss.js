@@ -103,9 +103,13 @@ function randomStyle() {
 
             // k, handsome, but what kind of knot? how baller we gonna be?
             if (cleanCollars) {} else {
-
-                // if we're doin' sloppy collars, don't get too crazy with it
-                choice += " (" + everydayKnots[(randomNumber(0, (everydayKnots.length)))] + " knot)";
+                
+                try {
+                    // if we're doin' sloppy collars, don't get too crazy with it
+                    choice += " (" + chooseKnot(everydayKnots) + " knot)";
+                } catch (e) {
+                    console.log(e.message);
+                }
             }
         }
     }
