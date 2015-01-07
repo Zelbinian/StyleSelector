@@ -100,36 +100,30 @@ function randomStyle() {
         // wearing a tie today?
         if (randomNumber(1, 10) > 3) {
             choice += ", tie";
+            try {
 
-            // k, handsome, but what kind of knot? how baller we gonna be?
-            if (cleanCollars) {
-                
-                // clean and trim, huh? we also wearing a vest?
-                if (vest) {
-                    
-                    // baller! we can be fancy or even super fancy!
-                    if (randomNumber(1, 10) < 8) {
-                        
-                        try {
+                // k, handsome, but what kind of knot? how baller we gonna be?
+                if (cleanCollars) {
+
+                    // clean and trim, huh? we also wearing a vest?
+                    if (vest) {
+
+                        // baller! we can be fancy or even super fancy!
+                        if (randomNumber(1, 10) < 8) {
                             choice += " (" + chooseKnot(fancyKnots) + " knot)";
-                        } catch (e) {
-                            console.log(e.message);
                         }
                     }
+
+                } else {
+                        // if we're doin' sloppy collars, don't get too crazy with it
+                        choice += " (" + chooseKnot(everydayKnots) + " knot)";
                 }
-            
-            } else {
-                
-                try {
-                    // if we're doin' sloppy collars, don't get too crazy with it
-                    choice += " (" + chooseKnot(everydayKnots) + " knot)";
-                } catch (e) {
+            } catch (e) {
                     console.log(e.message);
-                }
             }
         }
     }
-
+    
     return choice;
 }
 
