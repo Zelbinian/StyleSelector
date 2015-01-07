@@ -101,7 +101,8 @@ function randomStyle() {
         if (randomNumber(1, 10) > 3) {
             choice += ", tie";
             try {
-
+                choice += " (";
+                
                 // k, handsome, but what kind of knot? how baller we gonna be?
                 if (cleanCollars) {
 
@@ -110,14 +111,16 @@ function randomStyle() {
 
                         // baller! we can be fancy or even super fancy!
                         if (randomNumber(1, 10) < 8) {
-                            choice += " (" + chooseKnot(fancyKnots) + " knot)";
+                            choice += chooseKnot(fancyKnots);
                         }
                     }
 
                 } else {
                         // if we're doin' sloppy collars, don't get too crazy with it
-                        choice += " (" + chooseKnot(everydayKnots) + " knot)";
+                        choice += chooseKnot(everydayKnots);
                 }
+                choice += " knot)";
+                
             } catch (e) {
                     console.log(e.message);
             }
