@@ -63,7 +63,7 @@ function randomStyle() {
         choice += "Dress shirt";
 
         // now we see about other acoutrements
-        
+
         // crisp and traditional, or sloppy and fashion forward?
         if (randomNumber(1, 10) > 8) {
             choice += ", neat collars";
@@ -71,16 +71,23 @@ function randomStyle() {
         } else {
             choice += ", sloppy collars";
         }
-        
+
         // how about a vest?
         if (randomNumber(1, 10) > 4) {
             choice += ", vest";
             vest = true;
         }
-        
+
         // wearing a tie today?
         if (randomNumber(1, 10) > 3) {
             choice += ", tie";
+
+            // k, handsome, but what kind of knot? how baller we gonna be?
+            if (cleanCollars) {} else {
+
+                // if we're doin' sloppy collars, don't get to crazy with it
+                choice += " (" + everydayKnots[(randomNumber(0, (everydayKnots.length)))] + " knot)";
+            }
         }
     }
 
@@ -91,8 +98,9 @@ function randomStyle() {
 
 /**
  * When the document is ready, write the result of the randomStyle function to the h1
- * tag with the "target" id.
+ * tag with the "
+                    target " id.
  */
 $(document).ready(function () {
-    $("#target").html(randomStyle);
+    $("#target ").html(randomStyle);
 });
