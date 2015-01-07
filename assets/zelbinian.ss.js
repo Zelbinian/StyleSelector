@@ -47,36 +47,36 @@ casual              +-------------------+dressy+-------------------+
 
  */
 function randomStyle() {
-    
+
     // this will return the randomly created choice; eventually will be a JSON object
     // but for now is just a string variable
-    var choice = "";
-    
+    var choice = "",
+        tie = false,
+        vest = false,
+        cleanCollars = false;
+
     // the basis for deciding on an outfit, which is based on me originally rolling a d20
     if (randomNumber(1, 20) < 9) {
         // if it's less than 9, it's a casual day, dressy otherwise
         choice = "Casual";
     } else {
         choice += "Dress shirt";
-        
+
         // now we see about other acoutrements
+        if (randomNumber(1, 10) > 3) {
+            choice += ", tie";
+        }
+        if (randomNumber(1, 10) > 4) {
+            choice += ", vest";
+        }
+
         if (randomNumber(1, 10) > 8) {
             choice += ", neat collars";
         } else {
             choice += ", sloppy collars";
         }
-        if (randomNumber(1, 10) > 3) {
-            choice += ", tie";
-            
-            if (randomNumber(1, 10) <= 8) {
-
-            }
-        }
-        if (randomNumber(1, 10) > 4) {
-            choice += ", vest";
-        }
     }
-    
+
     return choice;
 }
 
