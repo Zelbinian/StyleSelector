@@ -112,6 +112,8 @@ function randomStyle() {
                         // baller! we can be fancy or even super fancy!
                         if (randomNumber(1, 10) < 8) {
                             choice += chooseKnot(fancyKnots);
+                        } else {
+                            choice += chooseKnot(extraFancyKnots);
                         }
                     }
 
