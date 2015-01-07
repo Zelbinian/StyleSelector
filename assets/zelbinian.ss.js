@@ -72,7 +72,7 @@ function randomStyle() {
     var choice = "",
         tie = false,
         vest = false,
-        cleanCollars = false;
+        neatCollars = false;
 
     // the basis for deciding on an outfit, which is based on me originally rolling a d20
     if (randomNumber(1, 20) < 9) {
@@ -86,7 +86,7 @@ function randomStyle() {
         // crisp and traditional, or sloppy and fashion forward?
         if (randomNumber(1, 10) > 8) {
             choice += ", neat collars";
-            cleanCollars = true;
+            neatCollars = true;
         } else {
             choice += ", sloppy collars";
         }
@@ -104,7 +104,7 @@ function randomStyle() {
                 choice += " (";
                 
                 // k, handsome, but what kind of knot? how baller we gonna be?
-                if (cleanCollars) {
+                if (neatCollars) {
 
                     // clean and trim, huh? we also wearing a vest?
                     if (vest) {
@@ -114,6 +114,14 @@ function randomStyle() {
                             choice += chooseKnot(fancyKnots);
                         } else {
                             choice += chooseKnot(extraFancyKnots);
+                        }
+                    } else {
+                        
+                        // still cool, we can be still fancy sometimes
+                        if (randomNumber(1, 10) < 8) {
+                            choice += chooseKnot(everydayKnots);
+                        } else {
+                            choice += chooseKnot(fancyKnots);
                         }
                     }
 
