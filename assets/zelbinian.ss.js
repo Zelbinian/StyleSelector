@@ -20,32 +20,30 @@ function randomNumber(min, max) {
  * Generates the information necessary for the website to decide what outfit to suggest
  * This is the decision tree the code is following (hopefully)
 
-   +-------------------------------------+begin                                     
-    |                                             +                                        
-    v                                             v                                        
- casual              +-------------------+dressy+-------------------+                
-                     |                                                       |                
-                     v                                                       v                
-         +----+messy collars+----------+------------+---------+clean collars+-+      
-         |           +                 |            |                         +         |      
-         |           |                 |            |                         |         |      
-         |           |                 |            |                         |         |      
-         |           |                 |            |                         |         |      
-         |           |                 |            |                         |         |      
-         |           |                 |            |                         |         |      
-         |           |                 |            |                         |         |      
-         |           |                 |            |                         |         |      
-         v           v                 v            v                         v         v      
-       tie          tie &           no tie,       vest                   tie &      tie     
-       only +--+--+ vest            no vest       only                 vest+--+--+only    
-               |                                                                    |           
-               |                                                                    |           
-               |                                                                    |           
-               v                                                              +----+----+      
-           everyday                                                          |          |      
-           knots only                                                        v          v      
-                                                                             fancy     fancy++  
-                                                                             knots     knots    
+   +-------------------------------------+begin                                         
+   |                                       +                                            
+   v                                       v                                            
+casual              +-------------------+dressy+-------------------+                    
+                    |                                              |                    
+                    v                                              v                    
+        +----+messy collars+----------+------------+---------+clean collars+-+          
+        |           +                 |            |               +         |          
+        |           |                 |            |               |         |          
+        |           |                 |            |               |         |          
+        |           |                 |            |               |         |          
+        |           |                 |            |               |         |          
+        |           |                 |            |               |         |          
+        |           |                 |            |               |         |          
+        |           |                 |            |               |         |          
+        v           v                 v            v               v         v          
+      tie          tie &           no tie,       vest            tie &      tie         
+      only +--+--+ vest            no vest       only          + vest+--+--+only+       
+              |                                                |        |       |       
+              |                                                |        |       |       
+              |                                                |        |       |       
+              v                                                v        v       v       
+          everyday                                           fancy++  fancy     everyday
+          knots only                                         knots    knots     knots   
 
  */
 function randomStyle() {
