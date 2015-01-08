@@ -75,30 +75,30 @@ function randomStyle() {
         neatCollars = false;
 
     // the basis for deciding on an outfit, which is based on me originally rolling a d20
-    if (randomNumber(1, 20) < 9) {
+    if (randomNumber(1, 20) <= 7) {
         // if it's less than 9, it's a casual day, dressy otherwise
         choice = "Casual";
-    } else {
+    } else { // 8 or above
         choice += "Dress shirt";
 
         // now we see about other acoutrements
 
         // crisp and traditional, or sloppy and fashion forward?
-        if (randomNumber(1, 10) > 8) {
+        if (randomNumber(1, 10) >= 8) {
             choice += ", neat collars";
             neatCollars = true;
-        } else {
+        } else { // 7 or less
             choice += ", sloppy collars";
         }
 
         // how about a vest?
-        if (randomNumber(1, 10) > 4) {
+        if (randomNumber(1, 20) >= 8) {
             choice += ", vest";
             vest = true;
         }
 
         // wearing a tie today?
-        if (randomNumber(1, 10) > 3) {
+        if (randomNumber(1, 20) >= 6) {
             choice += ", tie";
             try {
                 choice += " (";
@@ -110,17 +110,17 @@ function randomStyle() {
                     if (vest) {
 
                         // baller! we can be fancy or even super fancy!
-                        if (randomNumber(1, 10) < 8) {
+                        if (randomNumber(1, 20) >= 8) {
                             choice += chooseKnot(fancyKnots);
-                        } else {
+                        } else { // 7 or less
                             choice += chooseKnot(extraFancyKnots);
                         }
                     } else {
                         
                         // still cool, we can be still fancy sometimes
-                        if (randomNumber(1, 10) < 8) {
+                        if (randomNumber(1, 10) >= 4) {
                             choice += chooseKnot(everydayKnots);
-                        } else {
+                        } else { // 3 or less
                             choice += chooseKnot(fancyKnots);
                         }
                     }
