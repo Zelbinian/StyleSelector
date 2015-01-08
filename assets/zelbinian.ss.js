@@ -1,6 +1,6 @@
 /** DATA OBJECTS **/
 var everydayKnots = ["Four-in-Hand", "Half Windsor"];
-var fancyKnots = ["Onassis", "Eldredge", "Trinity", "Novotny", "Caldwell Swag", "Viper", "Deivao Twist", "Arrow", "Cape"];
+var fancyKnots = ["Onassis", "Eldredge", "Trinity", "Novotny", "Caldwell Swag", "Viper", "Deivao Twist", "Arrow", "Cape", "Velvet"];
 var extraFancyKnots = ["Double Eldredge", "Harlequin", "FinFrock", "Pekada", "Tulip"];
 
 /** FUNCTIONS **/
