@@ -1,7 +1,7 @@
 /** DATA OBJECTS **/
 var everydayKnots = ["Four-in-Hand", "Half Windsor"];
-var fancyKnots = ["Onassis", "Eldredge", "Trinity", "Novotny", "Caldwell Swag", "Viper", "Deivao Twist", "Arrow", "Cape", "Velvet"];
-var extraFancyKnots = ["Double Eldredge", "Harlequin", "FinFrock", "Pekada", "Tulip"];
+var fancyKnots = ["Onassis", "Eldredge", "Trinity", "Caldwell Swag", "Viper", "Deivao Twist", "Arrow", "Cape", "Velvet", "Van Wijk", "Fishbone", "Glennie Braided"];
+var extraFancyKnots = ["Double Eldredge", "Harlequin", "FinFrock", "Pekada", "Tulip", "Merovingian"];
 
 /** FUNCTIONS **/
 
