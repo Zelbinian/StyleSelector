@@ -148,5 +148,5 @@ function randomStyle() {
                     target " id.
  */
 $(document).ready(function () {
-    $("#t").html(randomStyle);
+    $(".panel-body").html(randomStyle);
 });
