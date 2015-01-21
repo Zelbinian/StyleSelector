@@ -1,20 +1,20 @@
-body {
-  padding-top: 50px;
+@media (max-width: 767px) {
+    body {
+        padding-top: 75px;
+    }
 }
-
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
+@media (min-width: 768px) {
+    body {
+        padding-top: 150px;
+    }
 }
-
-<!-- Bootstrap Modifications -->
-<!-- These are courtesy of http://www.wearesicc.com/quick-tips-5-column-layout-with-twitter-bootstrap/ -->
+<!-- Bootstrap Modifications --> <!-- These are courtesy of http://www.wearesicc.com/quick-tips-5-column-layout-with-twitter-bootstrap/ -->
 .col-xs-15 {
     width: 20%;
     float: left;
 }
 @media (min-width: 768px) {
-.col-sm-15 {
+    .col-sm-15 {
         width: 20%;
         float: left;
     }
@@ -31,7 +31,6 @@ body {
         float: left;
     }
 }
-
 .col-xs-15,
 .col-sm-15,
 .col-md-15,
