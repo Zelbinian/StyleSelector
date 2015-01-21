@@ -20,3 +20,14 @@ QUnit.test("randomNumber flipped inputs", function( assert ) {
     var result = randomNumber(10,1);
     assert.ok((result >= 1 && result <= 10), "Expected result to be between 1 and 10 and got " + result); 
 });
+
+QUnit.module("chooseKnot tests");
+QUnit.test("chooseKnot empty list", function( assert ) {
+    assert.throws(function() {chooseKnot([])}, "Should throw an error when presented with an empty list");
+});
+
+QUnit.test("chooseKnot pick from list", function( assert ) {
+    var sampleList = ["one", "two", "three"];
+    var result = chooseKnot(sampleList);
+    assert.ok($.inArray(result, sampleList) > -1, "Should always return an item from the provided list.\nlist: " + sampleList + "\nresult: " + result);
+});
