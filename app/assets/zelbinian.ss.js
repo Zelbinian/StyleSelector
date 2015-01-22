@@ -209,7 +209,8 @@ function panelBuilder() {
             panelHeadingDiv.appendTo(panelDiv);
         
             panelTitleH3 = $("<h3></h3>", {
-                text: weekdays[(dayOfWeek + panelsBuilt) % 7],
+                // the modulus lets the array work like a wrapping list without any extra code
+                text: weekdays[(dayOfWeek + panelsBuilt) % 7], 
                 "class": "panel-title"
             }).appendTo(panelHeadingDiv);
         }
