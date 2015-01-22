@@ -161,10 +161,8 @@ function panelBuilder() {
     /** This is what we're trying to build each time
             
         */
-
-    // auto-incrementing panelsBuilt right in the while loop condition statement
-    // like a boss    
-    while (panelsBuilt++ < panelsToBuild) {
+  
+    while (panelsBuilt < panelsToBuild) {
         
         // the element variables need to be declared ahead of time to make the
         // branching code efficient and not using any repeating code
@@ -182,6 +180,9 @@ function panelBuilder() {
             
         //} else if (panelsBuilt === 1){ // second panel
         } else { // rest of the panels
+            panelDiv = $("<div></div>", {
+                "class": "panel panel-default"
+            }).appendTo(colDiv);
         }
             
         // this actually builds each panel and appends it
@@ -201,6 +202,8 @@ function panelBuilder() {
             }).appendTo(panelDiv);
 
         $(".row:first-child").append(colDiv);
+        
+        panelsBuilt++;
     }
 
 }
