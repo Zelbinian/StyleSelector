@@ -197,5 +197,6 @@ function panelBuilder() {
                     target " id.
  */
 $(document).ready(function () {
+    panelBuilder();
     $(".panel-body").html(randomStyle);
 });
