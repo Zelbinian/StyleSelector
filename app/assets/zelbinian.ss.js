@@ -166,20 +166,36 @@ function panelBuilder() {
     // like a boss    
     while (panelsBuilt++ < panelsToBuild) {
         
-        // this actually builds each panel and appends it
-        var colDiv = $("<div></div>", {
+        // the element variables need to be declared ahead of time to make the
+        // branching code efficient and not using any repeating code
+        var colDiv, panelDiv, panelHeadingDiv, panelTitleH3, panelBodyDiv;
+        
+        colDiv = $("<div></div>", {
                 "class": "col-sm-15"
-            }),
+            });
+        
+        if (panelsBuilt === 0) { // first panel
+            
             panelDiv = $("<div></div>", {
-                "class": "panel panel-default"
-            }).appendTo(colDiv),
+                "class": "panel panel-primary"
+            }).appendTo(colDiv);
+            
+        //} else if (panelsBuilt === 1){ // second panel
+        } else { // rest of the panels
+        }
+            
+        // this actually builds each panel and appends it
+        
+            
             panelHeadingDiv = $("<div></div>", {
                 "class": "panel-heading"
-            }).appendTo(panelDiv),
+            }).appendTo(panelDiv);
+        
             panelTitleH3 = $("<h3></h3>", {
                 text: "Title",
                 "class": "panel-title"
-            }).appendTo(panelHeadingDiv),
+            }).appendTo(panelHeadingDiv);
+        
             panelBodyDiv = $("<div></div>", {
                 "class": "panel-body"
             }).appendTo(panelDiv);
