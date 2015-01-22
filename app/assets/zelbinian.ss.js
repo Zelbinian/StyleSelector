@@ -143,6 +143,7 @@ function randomStyle() {
 
 /**
  * This builds the panels on the page that display the style forcast
+ * Each panel looks like this
  * <div class="col-sm-15">
  *     <div class="panel panel-default" id=""> // first one will be panel-primary, ids are variable
             <div class="panel-heading">
@@ -157,10 +158,6 @@ function panelBuilder() {
 
     var panelsToBuild = 5, // yeah, this is hard-coded for now - deal with it B-)
         panelsBuilt = 0;
-
-    /** This is what we're trying to build each time
-            
-        */
   
     while (panelsBuilt < panelsToBuild) {
         
@@ -172,34 +169,40 @@ function panelBuilder() {
                 "class": "col-sm-15"
             });
         
+        panelHeadingDiv = $("<div></div>", {
+            "class": "panel-heading"
+        });
+        
         if (panelsBuilt === 0) { // first panel
             
             panelDiv = $("<div></div>", {
                 "class": "panel panel-primary"
             }).appendTo(colDiv);
             
-        //} else if (panelsBuilt === 1){ // second panel
-        } else { // rest of the panels
-            panelDiv = $("<div></div>", {
-                "class": "panel panel-default"
-            }).appendTo(colDiv);
-        }
-            
-        // this actually builds each panel and appends it
-        
-            
-            panelHeadingDiv = $("<div></div>", {
-                "class": "panel-heading"
-            }).appendTo(panelDiv);
+            panelHeadingDiv.appendTo(panelDiv);
         
             panelTitleH3 = $("<h3></h3>", {
                 text: "Title",
                 "class": "panel-title"
             }).appendTo(panelHeadingDiv);
+            
+        //} else if (panelsBuilt === 1){ // second panel
+        } else { // rest of the panels
+            panelDiv = $("<div></div>", {
+                "class": "panel panel-default"
+            }).appendTo(colDiv);
+            
+            panelHeadingDiv.appendTo(panelDiv);
         
-            panelBodyDiv = $("<div></div>", {
-                "class": "panel-body"
-            }).appendTo(panelDiv);
+            panelTitleH3 = $("<h3></h3>", {
+                text: "Title",
+                "class": "panel-title"
+            }).appendTo(panelHeadingDiv);
+        }
+        
+        panelBodyDiv = $("<div></div>", {
+            "class": "panel-body"
+        }).appendTo(panelDiv);
 
         $(".row:first-child").append(colDiv);
         
