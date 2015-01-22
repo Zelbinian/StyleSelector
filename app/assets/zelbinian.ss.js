@@ -140,6 +140,15 @@ function randomStyle() {
     return choice;
 }
 
+/**
+ * This builds the panels on the page that display the style forcast
+ */
+function panelBuilder() {
+    
+    var panelsToBuild = 5; // yeah, this is hard-coded for now
+
+}
+
 /** SCRIPTS **/
 
 /**
