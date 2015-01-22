@@ -161,6 +161,12 @@ function panelBuilder() {
             </div>
         */
     
+    var colDiv = $("<div>", {
+        "class": "col-sm-15"
+    });
+    
+    colDiv.appendTo(".row:first-child");
+    
     // auto-incrementing panelsBuilt right in the while loop condition statement
     // like a boss    
     while (panelsBuilt++ < panelsToBuild) {
