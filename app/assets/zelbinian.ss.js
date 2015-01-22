@@ -161,14 +161,24 @@ function panelBuilder() {
             </div>
         */
 
-    var colDiv = $("<div>", {
+    var colDiv = $("<div></div>", {
             "class": "col-sm-15"
         }),
-        panelDiv = $("<div>", {
+        panelDiv = $("<div></div>", {
             "class": "panel panel-default"
-        }).appendTo(colDiv);
+        }).appendTo(colDiv),
+        panelHeadingDiv = $("<div></div>", {
+            "class": "panel-heading"
+        }).appendTo(panelDiv),
+        panelTitleH3 = $("<h3></h3>", {
+            text: "Title",
+            "class": "panel-title"
+        }).appendTo(panelHeadingDiv),
+        panelBodyDiv = $("<div></div>", {
+            "class": "panel-body"
+        }).appendTo(panelDiv);
 
-    colDiv.appendTo(".row:first-child");
+    $(".row:first-child").append(colDiv);
 
     // auto-incrementing panelsBuilt right in the while loop condition statement
     // like a boss    
