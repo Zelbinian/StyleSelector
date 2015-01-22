@@ -25,14 +25,14 @@ function randomNumber(min, max) {
  * @param (array) list - list from which an element should be chosen
  */
 function chooseKnot(list) {
-    
+
     // protecting against a null or empty list being tossed in
     if (list === null || list.length === 0) {
         throw new Error("The list cannot be empty");
     }
-    
+
     var randomIndex = randomNumber(0, list.length - 1);
-    
+
     return list[randomIndex];
 }
 
@@ -103,7 +103,7 @@ function randomStyle() {
             choice += ", tie";
             try {
                 choice += " (";
-                
+
                 // k, handsome, but what kind of knot? how baller we gonna be?
                 if (neatCollars) {
 
@@ -117,7 +117,7 @@ function randomStyle() {
                             choice += chooseKnot(extraFancyKnots);
                         }
                     } else {
-                        
+
                         // still cool, we can be still fancy sometimes
                         if (randomNumber(1, 10) >= 4) {
                             choice += chooseKnot(everydayKnots);
@@ -131,13 +131,13 @@ function randomStyle() {
                     choice += chooseKnot(everydayKnots);
                 }
                 choice += " knot)";
-                
+
             } catch (e) {
-                    console.log(e.message);
+                console.log(e.message);
             }
         }
     }
-    
+
     return choice;
 }
 
@@ -145,32 +145,35 @@ function randomStyle() {
  * This builds the panels on the page that display the style forcast
  */
 function panelBuilder() {
-    
+
     var panelsToBuild = 5, // yeah, this is hard-coded for now - deal with it B-)
         panelsBuilt = 0;
-    
+
     /** This is what we're trying to build each time
             <div class="col-sm-15">
-                <div class="panel panel-default" id="">
+                <div class="panel panel-default" id=""> // first one will be panel-primary, ids are variable
                     <div class="panel-heading">
-                        <h3 class="panel-title"></h3>
+                        <h3 class="panel-title"></h3> // innerHTML here is variable
                     </div>
                     <div class="panel-body">
                     </div>
                 </div>
             </div>
         */
-    
+
     var colDiv = $("<div>", {
-        "class": "col-sm-15"
-    });
-    
+            "class": "col-sm-15"
+        }),
+        panelDiv = $("<div>", {
+            "class": "panel panel-default"
+        }).appendTo(colDiv);
+
     colDiv.appendTo(".row:first-child");
-    
+
     // auto-incrementing panelsBuilt right in the while loop condition statement
     // like a boss    
     while (panelsBuilt++ < panelsToBuild) {
-        
+
     }
 
 }
