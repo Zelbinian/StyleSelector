@@ -127,8 +127,8 @@ function randomStyle() {
                     }
 
                 } else {
-                        // if we're doin' sloppy collars, don't get too crazy with it
-                        choice += chooseKnot(everydayKnots);
+                    // if we're doin' sloppy collars, don't get too crazy with it
+                    choice += chooseKnot(everydayKnots);
                 }
                 choice += " knot)";
                 
@@ -146,8 +146,14 @@ function randomStyle() {
  */
 function panelBuilder() {
     
-    var panelsToBuild = 5, // yeah, this is hard-coded for now
+    var panelsToBuild = 5, // yeah, this is hard-coded for now - deal with it B-)
         panelsBuilt = 0;
+    
+    // auto-incrementing panelsBuilt right in the while loop condition statement
+    // like a boss
+    while (panelsBuilt++ < panelsToBuild) {
+        
+    }
 
 }
 
