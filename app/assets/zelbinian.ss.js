@@ -157,7 +157,8 @@ function randomStyle() {
 function panelBuilder() {
 
     var panelsToBuild = 5, // yeah, this is hard-coded for now - deal with it B-)
-        panelsBuilt = 0;
+        panelsBuilt = 0,
+        dayOfWeek = new Date().getDay(); // we use this to update the titles
   
     while (panelsBuilt < panelsToBuild) {
         
@@ -200,6 +201,7 @@ function panelBuilder() {
             }).appendTo(panelHeadingDiv);
             
         } else { // rest of the panels
+            
             panelDiv = $("<div></div>", {
                 "class": "panel panel-default"
             }).appendTo(colDiv);
@@ -207,7 +209,7 @@ function panelBuilder() {
             panelHeadingDiv.appendTo(panelDiv);
         
             panelTitleH3 = $("<h3></h3>", {
-                text: "Title",
+                text: weekdays[(dayOfWeek + panelsBuilt) % 7],
                 "class": "panel-title"
             }).appendTo(panelHeadingDiv);
         }
