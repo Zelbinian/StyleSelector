@@ -149,8 +149,20 @@ function panelBuilder() {
     var panelsToBuild = 5, // yeah, this is hard-coded for now - deal with it B-)
         panelsBuilt = 0;
     
+    /** This is what we're trying to build each time
+            <div class="col-sm-15">
+                <div class="panel panel-default" id="">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"></h3>
+                    </div>
+                    <div class="panel-body">
+                    </div>
+                </div>
+            </div>
+        */
+    
     // auto-incrementing panelsBuilt right in the while loop condition statement
-    // like a boss
+    // like a boss    
     while (panelsBuilt++ < panelsToBuild) {
         
     }
