@@ -182,11 +182,23 @@ function panelBuilder() {
             panelHeadingDiv.appendTo(panelDiv);
         
             panelTitleH3 = $("<h3></h3>", {
-                text: "Title",
+                text: "Today",
                 "class": "panel-title"
             }).appendTo(panelHeadingDiv);
             
-        //} else if (panelsBuilt === 1){ // second panel
+        } else if (panelsBuilt === 1){ // second panel
+            
+            panelDiv = $("<div></div>", {
+                "class": "panel panel-default"
+            }).appendTo(colDiv);
+            
+            panelHeadingDiv.appendTo(panelDiv);
+        
+            panelTitleH3 = $("<h3></h3>", {
+                text: "Tomorrow",
+                "class": "panel-title"
+            }).appendTo(panelHeadingDiv);
+            
         } else { // rest of the panels
             panelDiv = $("<div></div>", {
                 "class": "panel panel-default"
