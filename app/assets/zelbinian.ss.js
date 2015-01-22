@@ -145,7 +145,8 @@ function randomStyle() {
  */
 function panelBuilder() {
     
-    var panelsToBuild = 5; // yeah, this is hard-coded for now
+    var panelsToBuild = 5, // yeah, this is hard-coded for now
+        panelsBuilt = 0;
 
 }
 
