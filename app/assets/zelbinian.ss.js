@@ -156,7 +156,7 @@ function randomStyle() {
         </div>
     </div>
  */
-function panelBuilder() {
+function forecastStyles() {
 
     var panelsToBuild = 5, // yeah, this is hard-coded for now - deal with it B-)
         panelsBuilt = 0;
@@ -202,7 +202,8 @@ function panelBuilder() {
             }).appendTo(panelHeadingDiv),
 
             panelBodyDiv = $("<div></div>", {
-                "class": "panel-body"
+                "class": "panel-body",
+                text: randomStyle()
             }).appendTo(panelDiv),
             
             panelFooterDiv = $("<div></div>", {
@@ -228,6 +229,5 @@ function panelBuilder() {
                     target " id.
  */
 $(document).ready(function () {
-    panelBuilder();
-    $(".panel-body").html(randomStyle());
+    forecastStyles();
 });
