@@ -201,6 +201,10 @@ function panelBuilder() {
 
             panelBodyDiv = $("<div></div>", {
                 "class": "panel-body"
+            }).appendTo(panelDiv),
+            
+            panelFooterDiv = $("<div></div>", {
+                "class": "panel-footer hidden"
             }).appendTo(panelDiv);
 
             $(".row:first-child").append(colDiv);
