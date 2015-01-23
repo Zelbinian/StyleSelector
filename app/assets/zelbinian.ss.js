@@ -149,8 +149,10 @@ function randomStyle() {
             <div class="panel-heading">
                 <h3 class="panel-title"></h3> // innerHTML here is variable
             </div>
-            <div class="panel-body">
-            </div>
+            <div class="panel-body"></div>
+            <div class="panel-footer">
+                <button class="btn btn-default btn-block">Click</button>
+            </div>            
         </div>
     </div>
  */
@@ -205,7 +207,14 @@ function panelBuilder() {
             
             panelFooterDiv = $("<div></div>", {
                 "class": "panel-footer hidden"
-            }).appendTo(panelDiv);
+            }).appendTo(panelDiv),
+            
+            rerollButton = $("<button></button>", {
+                type: "button",
+                "class": "btn btn-default btn-block",
+                text: "Reroll Outfit",
+                onclick: '$(this).parent().prev().text(randomStyle())'
+            }).appendTo(panelFooterDiv);
         
             panelDiv.hover(function () {
                 $(".panel-footer", this).removeClass("hidden");
