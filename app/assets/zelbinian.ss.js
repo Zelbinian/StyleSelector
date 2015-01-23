@@ -211,9 +211,9 @@ function panelBuilder() {
             
             rerollButton = $("<button></button>", {
                 type: "button",
-                "class": "btn btn-default btn-block",
+                "class": "btn btn-default",
                 text: "Reroll Outfit",
-                onclick: '$(this).parent().prev().text(randomStyle())'
+                onclick: '$(".panel-body", $(this).closest("div.panel")).text(randomStyle())'
             }).appendTo(panelFooterDiv);
         
             panelDiv.hover(function () {
