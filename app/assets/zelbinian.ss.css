@@ -41,11 +41,13 @@
     padding-left: 10px;
 }
 <!-- these are my own extensions of Bootstrap --> 
+.panel-footer:hover {
+   
+}
 .panel-footer:hover,
 .panel-footer:focus {
-    
-    cursor: pointer;
     background: #eee;
+    cursor: pointer;
 }
 .panel-footer:active {
     background: #555;

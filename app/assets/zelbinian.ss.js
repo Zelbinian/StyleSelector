@@ -212,19 +212,6 @@ function panelBuilder() {
                 html: '<i class="fa fa-refresh"></i> Reroll Outfit',
                 onclick: '$(".panel-body", $(this).closest("div.panel")).text(randomStyle())'
             }).appendTo(panelDiv);
-            
-            /*rerollButton = $("<button></button>", {
-                type: "button",
-                "class": "btn btn-default btn-block",
-                text: "Reroll Outfit",
-                onclick: '$(".panel-body", $(this).closest("div.panel")).text(randomStyle())'
-            }).appendTo(panelFooterDiv);*/
-        
-            /**panelFooterDiv.hover(function () {
-                $(".panel-footer", this).removeClass("hidden");
-            }, function() {
-                $(".panel-footer", this).addClass("hidden");
-            });*/
 
             $(".row:first-child").append(colDiv);
 
