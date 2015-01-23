@@ -186,7 +186,8 @@ function panelBuilder() {
             }),
             
             panelDiv = $("<div></div>", {
-                "class": "panel panel-" + panelType
+                "class": "panel panel-" + panelType,
+                id: "day" + (panelsBuilt + 1)
             }).appendTo(colDiv),
 
             panelHeadingDiv = $("<div></div>", {
@@ -218,5 +219,5 @@ function panelBuilder() {
  */
 $(document).ready(function () {
     panelBuilder();
-    $(".panel-body").html(randomStyle);
+    $(".panel-body").html(randomStyle());
 });
