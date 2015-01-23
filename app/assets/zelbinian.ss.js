@@ -206,7 +206,7 @@ function panelBuilder() {
             }).appendTo(panelDiv),
             
             panelFooterDiv = $("<div></div>", {
-                "class": "panel-footer hidden"
+                "class": "panel-footer"
             }).appendTo(panelDiv),
             
             rerollButton = $("<button></button>", {
@@ -215,12 +215,6 @@ function panelBuilder() {
                 text: "Reroll Outfit",
                 onclick: '$(".panel-body", $(this).closest("div.panel")).text(randomStyle())'
             }).appendTo(panelFooterDiv);
-        
-            panelDiv.hover(function () {
-                $(".panel-footer", this).removeClass("hidden");
-            }, function() {
-                $(".panel-footer", this).addClass("hidden");
-            });
 
             $(".row:first-child").append(colDiv);
 
