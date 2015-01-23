@@ -157,70 +157,56 @@ function randomStyle() {
 function panelBuilder() {
 
     var panelsToBuild = 5, // yeah, this is hard-coded for now - deal with it B-)
-        panelsBuilt = 0,
-        dayOfWeek = new Date().getDay(); // we use this to update the titles
-  
+        panelsBuilt = 0;
+
     while (panelsBuilt < panelsToBuild) {
-        
+
+        dayOfWeek = new Date().getDay(); // we use this to update the titles
+
         // the element variables need to be declared ahead of time to make the
         // branching code efficient and not using any repeating code
-        var colDiv, panelDiv, panelHeadingDiv, panelTitleH3, panelBodyDiv;
-        
-        colDiv = $("<div></div>", {
-                "class": "col-sm-15"
-            });
-        
-        panelHeadingDiv = $("<div></div>", {
-            "class": "panel-heading"
-        });
-        
-        if (panelsBuilt === 0) { // first panel
-            
-            panelDiv = $("<div></div>", {
-                "class": "panel panel-primary"
-            }).appendTo(colDiv);
-            
-            panelHeadingDiv.appendTo(panelDiv);
-        
-            panelTitleH3 = $("<h3></h3>", {
-                text: "Today",
-                "class": "panel-title"
-            }).appendTo(panelHeadingDiv);
-            
-        } else if (panelsBuilt === 1){ // second panel
-            
-            panelDiv = $("<div></div>", {
-                "class": "panel panel-default"
-            }).appendTo(colDiv);
-            
-            panelHeadingDiv.appendTo(panelDiv);
-        
-            panelTitleH3 = $("<h3></h3>", {
-                text: "Tomorrow",
-                "class": "panel-title"
-            }).appendTo(panelHeadingDiv);
-            
-        } else { // rest of the panels
-            
-            panelDiv = $("<div></div>", {
-                "class": "panel panel-default"
-            }).appendTo(colDiv);
-            
-            panelHeadingDiv.appendTo(panelDiv);
-        
-            panelTitleH3 = $("<h3></h3>", {
-                // the modulus lets the array work like a wrapping list without any extra code
-                text: weekdays[(dayOfWeek + panelsBuilt) % 7], 
-                "class": "panel-title"
-            }).appendTo(panelHeadingDiv);
-        }
-        
-        panelBodyDiv = $("<div></div>", {
-            "class": "panel-body"
-        }).appendTo(panelDiv);
+        var panelType = "default";
 
-        $(".row:first-child").append(colDiv);
-        
+        if (panelsBuilt === 0) { // first panel
+
+            panelType = "primary";
+
+            dayOfWeek = "Today";
+
+        } else if (panelsBuilt === 1) { // second panel
+
+            dayOfWeek = "Tomorrow";
+
+        } else { // rest of the panels
+
+            // the modulus lets the array work like a wrapping list without any extra code
+            dayOfWeek = weekdays[(dayOfWeek + panelsBuilt) % 7];
+
+        }
+
+        var colDiv = $("<div></div>", {
+                "class": "col-sm-15"
+            }),
+            
+            panelDiv = $("<div></div>", {
+                "class": "panel panel-" + panelType
+            }).appendTo(colDiv),
+
+            panelHeadingDiv = $("<div></div>", {
+                "class": "panel-heading"
+            }).appendTo(panelDiv),
+
+            panelTitleH3 = $("<h3></h3>", {
+                text: dayOfWeek,
+                "class": "panel-title"
+            }).appendTo(panelHeadingDiv),
+
+            panelBodyDiv = $("<div></div>", {
+                "class": "panel-body"
+            }).appendTo(panelDiv),
+
+            $(".row:first-child").append(colDiv);
+
         panelsBuilt++;
     }
 
