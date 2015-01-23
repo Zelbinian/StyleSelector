@@ -2,7 +2,14 @@
 var everydayKnots = ["Four-in-Hand", "Half Windsor"],
     fancyKnots = ["Onassis", "Eldredge", "Trinity", "Caldwell Swag", "Viper", "Deivao Twist", "Arrow", "Cape", "Velvet", "Van Wijk", "Fishbone", "Glennie Braided"],
     extraFancyKnots = ["Double Eldredge", "Harlequin", "FinFrock", "Pekada", "Tulip", "Merovingian"],
-    weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    dailyStyles = {
+        day1:"",
+        day2:"",
+        day3:"",
+        day4:"",
+        day5:"",
+    };
 
 /** FUNCTIONS **/
 
@@ -164,7 +171,10 @@ function forecastStyles() {
     while (panelsBuilt < panelsToBuild) {
 
         var dayOfWeek = new Date().getDay(), // we use this to update the titles
-            panelType = "default"; // most will use default panel styling
+            panelType = "default", // most will use default panel styling
+            dayNum = "day" + (panelsBuilt + 1); // store the day index
+        
+        dailyStyles[dayNum] = randomStyle(); // create a random style in the right spot
 
         if (panelsBuilt === 0) { // first panel
 
@@ -189,7 +199,7 @@ function forecastStyles() {
             
             panelDiv = $("<div></div>", {
                 "class": "panel panel-" + panelType,
-                id: "day" + (panelsBuilt + 1)
+                id: dayNum
             }).appendTo(colDiv),
 
             panelHeadingDiv = $("<div></div>", {
@@ -203,7 +213,7 @@ function forecastStyles() {
 
             panelBodyDiv = $("<div></div>", {
                 "class": "panel-body",
-                text: randomStyle()
+                text: dailyStyles[dayNum]
             }).appendTo(panelDiv),
             
             panelFooterDiv = $("<div></div>", {
