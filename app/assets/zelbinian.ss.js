@@ -206,6 +206,12 @@ function panelBuilder() {
             panelFooterDiv = $("<div></div>", {
                 "class": "panel-footer hidden"
             }).appendTo(panelDiv);
+        
+            panelDiv.hover(function () {
+                $(".panel-footer", this).removeClass("hidden");
+            }, function() {
+                $(".panel-footer", this).addClass("hidden");
+            });
 
             $(".row:first-child").append(colDiv);
 
