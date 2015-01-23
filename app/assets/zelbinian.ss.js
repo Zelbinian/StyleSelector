@@ -161,7 +161,7 @@ function panelBuilder() {
 
     while (panelsBuilt < panelsToBuild) {
 
-        dayOfWeek = new Date().getDay(); // we use this to update the titles
+        var dayOfWeek = new Date().getDay(); // we use this to update the titles
 
         // the element variables need to be declared ahead of time to make the
         // branching code efficient and not using any repeating code
