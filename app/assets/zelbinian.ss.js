@@ -203,7 +203,7 @@ function panelBuilder() {
 
             panelBodyDiv = $("<div></div>", {
                 "class": "panel-body"
-            }).appendTo(panelDiv),
+            }).appendTo(panelDiv);
 
             $(".row:first-child").append(colDiv);
 
