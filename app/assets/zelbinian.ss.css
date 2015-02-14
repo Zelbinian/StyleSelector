@@ -1,5 +1,7 @@
 body {
-    background: url(background.png);
+    background: url(tie-bg-lg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 @media (max-width: 767px) {
