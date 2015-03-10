@@ -50,6 +50,22 @@ body {
     padding-right: 10px;
     padding-left: 10px;
 }
+
+/* this extension is based on one of Boostrap's own examples,
+http://getbootstrap.com/examples/sticky-footer-navbar/ */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #222;
+} 
+
+.footer > .container {
+    padding: 10px 15px;
+}
+
 /* these are my own extensions of Bootstrap */
 
 .panel-footer:hover,
