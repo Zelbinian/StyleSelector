@@ -1,10 +1,10 @@
 body {
-    <!--
+    /**
     img is the intellectual of flickr user https://www.flickr.com/photos/michaelnpatterson/
     This size of this image has been modified.
     This image is used as part of the CC BY-ND 2.0 license provided with it. Its use here
     is not considered an endorsement of this website by the creator.
-    -->
+    */
     background: url(background-lg.jpg);
 }
 @media (max-width: 767px) {
@@ -17,7 +17,8 @@ body {
         padding-top: 150px;
     }
 }
-<!-- Bootstrap Modifications --> <!-- These are courtesy of http://www.wearesicc.com/quick-tips-5-column-layout-with-twitter-bootstrap/ -->
+/* Bootstrap Modifications */
+/* These are courtesy of http://www.wearesicc.com/quick-tips-5-column-layout-with-twitter-bootstrap/ */
 .col-xs-15 {
     width: 20%;
     float: left;
