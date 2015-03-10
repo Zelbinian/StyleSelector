@@ -58,12 +58,15 @@ http://getbootstrap.com/examples/sticky-footer-navbar/ */
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 40px;
     background-color: #222;
 } 
 
 .footer > .container {
-    padding: 10px 15px;
+    padding: 0 15px;
+}
+
+.container .text-muted {
+    margin: 20px 0;
 }
 
 /* these are my own extensions of Bootstrap */
