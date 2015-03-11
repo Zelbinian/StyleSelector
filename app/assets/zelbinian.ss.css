@@ -1,9 +1,18 @@
 body {
+<<<<<<< HEAD
     background: url(tie-bg-lg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+=======
+    /**
+    img is the intellectual of flickr user https://www.flickr.com/photos/michaelnpatterson/
+    This size of this image has been modified.
+    This image is used as part of the CC BY-ND 2.0 license provided with it. Its use here
+    is not considered an endorsement of this website by the creator.
+    */
+    background: url(background-lg.jpg);
+>>>>>>> origin/master
 }
-
 @media (max-width: 767px) {
     body {
         padding: 75px;
@@ -14,7 +23,8 @@ body {
         padding-top: 150px;
     }
 }
-<!-- Bootstrap Modifications --> <!-- These are courtesy of http://www.wearesicc.com/quick-tips-5-column-layout-with-twitter-bootstrap/ -->
+/* Bootstrap Modifications */
+/* These are courtesy of http://www.wearesicc.com/quick-tips-5-column-layout-with-twitter-bootstrap/ */
 .col-xs-15 {
     width: 20%;
     float: left;
@@ -46,10 +56,27 @@ body {
     padding-right: 10px;
     padding-left: 10px;
 }
-<!-- these are my own extensions of Bootstrap --> 
-.panel-footer:hover {
-   
+
+/* this extension is based on one of Boostrap's own examples,
+http://getbootstrap.com/examples/sticky-footer-navbar/ */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #222;
+} 
+
+.footer > .container {
+    padding: 0 15px;
 }
+
+.container .text-muted {
+    margin: 20px 0;
+}
+
+/* these are my own extensions of Bootstrap */
+
 .panel-footer:hover,
 .panel-footer:focus {
     background: #eee;
@@ -58,4 +85,17 @@ body {
 .panel-footer:active {
     background: #555;
     color: #eee;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+/* Got this from http://stackoverflow.com/questions/2584138/css3-continuous-rotate-animation-just-like-a-loading-sundial */
+
+i:hover {
+    -webkit-animation: spin 1.5s infinite ease;
 }
